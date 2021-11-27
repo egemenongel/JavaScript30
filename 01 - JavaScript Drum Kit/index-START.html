@@ -59,10 +59,12 @@
 
 <script>
 window.addEventListener("keydown",function(e){
+  const KEY = document.querySelector(`div[data-key="${e.keyCode}"`);
   const AUDIO= document.querySelector(`audio[data-key="${e.keyCode}"]`);
   console.log(AUDIO);
   if(AUDIO != null){
     AUDIO.play();
+    KEY.classList.add("playing");
   }
 });
 </script>
