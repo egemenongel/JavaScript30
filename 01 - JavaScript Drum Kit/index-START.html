@@ -60,7 +60,7 @@
 <script>
 function playSound(e){
   const AUDIO= document.querySelector(`audio[data-key="${e.keyCode}"]`);
-  const KEY = document.querySelector(`.key[data-key="${e.keyCode}"]`); 
+  const KEY = document.querySelector(`.key[data-key="${e.keyCode}"]`);
   if(!AUDIO) return;
   KEY.classList.add("playing");
   AUDIO.currentTime=0; //to play sound again and again
